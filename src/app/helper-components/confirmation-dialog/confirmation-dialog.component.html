@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Confirm Login</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>Please enter the 6 digit code that sent to your email.</h3>
+    <form [formGroup]="form">
+        <input matinput required type="text" name="code" id="code" placeholder="_ _ _ _ _ _" formControlName="code">
+        <mat-error *ngIf="form.get('code').invalid && form.get('code').touched">
+            Please enter 6 digit numbers
+        </mat-error>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="confirmCode()">Submit</button>
+</mat-dialog-actions>
