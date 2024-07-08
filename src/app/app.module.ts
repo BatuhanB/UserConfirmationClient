@@ -15,11 +15,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmationDialogComponent } from './helper-components/confirmation-dialog/confirmation-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './components/home/home.component';
+import { UserComponent } from './components/user/user.component';  
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent,ConfirmationDialogComponent],
+  declarations: [AppComponent, LoginComponent,ConfirmationDialogComponent, HomeComponent, UserComponent],
   imports: [
     BrowserModule,
     CommonModule,
